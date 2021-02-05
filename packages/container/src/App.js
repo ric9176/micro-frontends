@@ -8,14 +8,14 @@ import {
 import MarketingApp from './components/MarketingApp';
 import Header from './components/Header';
 
-const generateClasName = createGenerateClassName({
+const generateClassName = createGenerateClassName({
   productionPrefix: 'co',
 });
 
 const App = () => {
   return (
     <BrowserRouter>
-      <StylesProvider generateClasName={generateClasName}>
+      <StylesProvider generateClassName={generateClassName}>
         <Header />
         <MarketingApp />
       </StylesProvider>
