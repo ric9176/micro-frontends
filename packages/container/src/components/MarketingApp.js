@@ -8,14 +8,17 @@ const MarketingApp = () => {
   useEffect(() => {
     const { onParentNavigate } = mount(ref.current, {
       onNavigate: ({ pathname: nextPathname }) => {
+        console.log('history.location', history.location);
         const { pathname } = history.location;
         if (pathname !== nextPathname) {
           history.push(nextPathname);
         }
       },
     });
-
-    history.listen(onParentNavigate);
+    console.log('onParentNavigate', onParentNavigate);
+    if (onParentNavigate) {
+      history.listen(onParentNavigate);
+    }
   }, []);
 
   return <div ref={ref} />;
