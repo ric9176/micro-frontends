@@ -27,10 +27,10 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
     },
   };
 };
-
+console.log('mount', mount);
 // In dev env we call mount immediately
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.getElementById('_marketing-dev-root');
+  const devRoot = document.getElementById('_auth-dev-root');
 
   if (devRoot) {
     mount(devRoot, { defaultHistory: createBrowserHistory() });
