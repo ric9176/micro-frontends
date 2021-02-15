@@ -15,7 +15,7 @@ const AuthApp = ({ onSignIn }) => {
           history.push(nextPathname);
         }
       },
-      onSignIn,
+      onSignIn: onSignIn,
     });
     if (onParentNavigate) {
       history.listen(onParentNavigate);

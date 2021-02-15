@@ -13,9 +13,9 @@ const devConfig = {
     port: 8083,
     historyApiFallback: true,
   },
-  headers: {
-    'Access-Control-Allow-Origin': '*',
-  },
+  // headers: {
+  //   'Access-Control-Allow-Origin': '*',
+  // },
   plugins: [
     new ModuleFederationPlugin({
       name: 'dashboard',
